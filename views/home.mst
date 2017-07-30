@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Directory</title>
+    <link rel="stylesheet" href="/screen.css">
+  </head>
+  <body>
+    <ul class="users">
+      <!-- Mustache syntax for a loop -->
+      {{#users}}
+        <li>
+          <img src="{{avatar}}" alt="" height="100" width="100">
+          <h3><a href="/info/{{id}}-{{username}}">{{name}}</a></h3>
+          <!-- This is for when there *IS* a job -->
+          {{#job}}
+          <p>
+            {{job}}, {{company}}
+          </p>
+          {{/job}}
+
+          <!-- This is for where there is not a job (e.g. job is `falsey` (e.g. null, or undefined)) -->
+          {{^job}}
+          <p class="funemployed">
+            Available for hire
+          </p>
+          {{/job}}
+        </li>
+      {{/users}}
+    </ul>
+  </body>
+</html>

@@ -1,17 +1,16 @@
 {
-  "private": "true",
-  "name": "userdirectory",
-  "version": "1.0.0",
-  "description": "Express JS.Node Exercise",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Todd Rogers",
-  "license": "ISC",
+  "private": true,
   "dependencies": {
     "express": "^4.15.3",
-    "express-mustache": "^1.0.3",
-    "mustache": "^2.3.0"
-  }
+    "mustache-express": "^1.2.5"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "user-directory-daily",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
